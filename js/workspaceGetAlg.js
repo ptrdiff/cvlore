@@ -34,15 +34,23 @@ var CVLore = window.CVLore || {};
         });
     }
 
-    function completeRequest(result) {
+    export function createListOfAlgorithm(data) {
         var text = "";
         var i = 0;
-        result.forEach(function(element) {
-            text += "<div id='id" + i + "'>" + element.Algorithm + "</div>";
-            i += 1;
+        data.forEach(function(element) {
+            if(element.Algorithm){
+                let strElement = element.Algorithm.replace(/ {2}/g, ' ');
+                text += "<div id='id" + i + "'>" + strElement + "</div>";
+                i += 1;
+            }
         });
         text += "";
-        document.getElementById("algorithmsBox").innerHTML = text;
+        return text;
+    }
+
+
+    function completeRequest(result) {
+        document.getElementById("algorithmsBox").innerHTML = createListOfAlgorithm(result);
     }
 
     $(function onDocReady() {
@@ -57,4 +65,8 @@ var CVLore = window.CVLore || {};
             $('#noApiMessage').show();
         }
     });
+
+    module.exports = {
+        createListOfAlgorithm: createListOfAlgorithm,
+    };
 }(jQuery));

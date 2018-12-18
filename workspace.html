@@ -46,18 +46,33 @@
     <div class='parent'>
         <div class='wrapper'>
             <div id='left-copy-1tomany' class='container'>
-                <div id="blur1">When elements are copyable, they can't be sorted in their origin container</div>
-                <div id="blur2">Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
-                <div id="blur3">Whenever that happens, a <code>cloned</code> event is raised</div>
-                <div>Note that the clones get destroyed if they're not dropped into another container</div>
-                <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
+                <div id="Gaussian blur">
+                    <p>Gaussian blur</p>
+                    Blurring an image by a Gaussian function. It is used to reduce image noise and reduce detail.
+                </div>
+                <div id="Canny edge detector">
+                    <p>Canny edge detector</p>
+                    Canny edge detection is a technique to extract useful structural information.
+                </div>
+                <div id="Corner detection">
+                    <p>Corner detection</p>
+                    A corner can be defined as the intersection of two edges.
+                </div>
+                <div id="Optical character recognition">
+                    <p>Optical character recognition</p>
+                    Optical character recognition is the mechanical or electronic conversion of images of typed, handwritten or printed text into machine-encoded text.
+                </div>
+                <div id="Image segmentation">
+                    <p>Image segmentation</p>
+                    In computer vision, image segmentation is the process of partitioning a digital image into multiple segments.
+                </div>
             </div>
             <div id='right-copy-1tomany' class='container'></div>
             <div class="form-group" >
                 <button class="btn btn-primary btn-block" id="save-alg-btn" type="submit">Save</button>
             </div>
-            <div class="form-group" id="algorithmsBox"></div>
         </div>
+        <div class="form-group" id="algorithmsBox"></div>
     </div>
 </div>
 <!-- /.container -->
